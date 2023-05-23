@@ -1,23 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useEffect, useState } from 'react';
+import { getCharacters } from './api';
+import Main from './Pages/main';
 
 function App() {
+
+  const [characters, setCharacters] = useState([]);
+
+  useEffect(() => {
+    const fetchCharacters = async () => {
+      try {
+        const response = await getCharacters();
+        setCharacters(response.data.data.results);
+      } catch (error) {
+        console.error('Error fetching characters:', error);
+      }
+    };
+
+    fetchCharacters();
+  }, []);
+
+  console.log(characters);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Main/>
     </div>
   );
 }
