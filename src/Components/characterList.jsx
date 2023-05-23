@@ -11,8 +11,7 @@ const BoxCharacters = styled.div`
 const CharactersDiv = styled.div`
     display: flex;
     flex-wrap: nowrap;
-    position: absolute;
-    bottom: 50px;
+    
     column-gap: 20px;
 `
 const NavigationDiv = styled.div`
@@ -21,8 +20,8 @@ const NavigationDiv = styled.div`
     column-gap: 25px;
     color: #C89B3C;
     font-family: LeagueFont;
-    position: absolute;
-    bottom: -40px;
+    position: relative;
+    top: 30px;
     
 `
 const NavigationImg = styled.img`

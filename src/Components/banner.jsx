@@ -6,8 +6,6 @@ const BannerDiv = styled.div`
     display: flex;
     justify-content: center;
     column-gap: 20px;
-    position: absolute;
-    top: 150px;
 `
 const ProgressDiv = styled.div`
     width: 510px;
@@ -39,7 +37,7 @@ export default function Banner(){
                 <h2>progreso de peliculas producidas</h2>
             </ProgressDiv>
             <VideoDiv>
-            <iframe width="382" height="193" src="https://www.youtube.com/embed/c3y7UTfvzX0?autoplay=1&mute=1&loop=1" title="YouTube video player" frameborder="0" ></iframe>
+            <iframe width="382" height="193" src="https://www.youtube.com/embed/c3y7UTfvzX0?autoplay=1&mute=1&loop=1&playlist=c3y7UTfvzX0" title="YouTube video player" frameborder="0" ></iframe>
             </VideoDiv>
             <ImageDiv>
                 <ImageFile src="https://mcdn.wallpapersafari.com/medium/30/87/bKOQC3.jpg" alt="Marvel Wallpaper" />

@@ -26,7 +26,7 @@ const CardTitleImg = styled.img`
 `
 const CardImageDiv = styled.div`
     position: absolute;
-    bottom: 30px;
+    bottom: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,7 +61,7 @@ const CardAvatar = styled.img`
 `
 const CardInfoDiv = styled.div`
     position: absolute;
-    bottom: 20px;
+    bottom: 80px;
 `
 
 export default function CharacterCard({nombre, imagen, comics, series}){
