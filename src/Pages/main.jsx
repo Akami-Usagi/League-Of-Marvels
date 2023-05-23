@@ -3,9 +3,6 @@ import styled from "styled-components"
 import CharacterList from "../Components/characterList";
 import Banner from "../Components/banner";
 
-const MainDiv = styled.div`
-    
-`
 
 const BackDiv = styled.div`
     width: 100%;
@@ -26,13 +23,13 @@ const ContentDiv = styled.div`
 
 export default function Main(){
     return(
-        <MainDiv>
+        <div>
             <BackDiv></BackDiv>
             <ContentDiv>
                 <Banner/>
                 <CharacterList/>
             </ContentDiv>
-        </MainDiv>
+        </div>
         
     )
 }
