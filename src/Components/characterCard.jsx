@@ -69,7 +69,7 @@ export default function CharacterCard({nombre, imagen, comics, series}){
         <CardBody>
             <CardTitle>
                 <CardTitleImg src="/img/lname_vector.svg" alt="lname" />
-                <h3>{nombre}</h3>
+                <p>{nombre}</p>
                 <CardTitleImg src="/img/rname_vector.svg" alt="rname" />
             </CardTitle>
             <CardImageDiv>
@@ -78,11 +78,11 @@ export default function CharacterCard({nombre, imagen, comics, series}){
             </CardImageDiv>
             <CardInfoDiv>
                 <CardInfo>
-                    <h3>Comics:</h3>
+                    <h4>Comics:</h4>
                     <h1>{comics}</h1>
                 </CardInfo>
                 <CardInfo>
-                    <h3>Series:</h3>
+                    <h4>Series:</h4>
                     <h1>{series}</h1>
                 </CardInfo>
             </CardInfoDiv>

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components"
+import ProgressBar from "./progressBar";
 
 const BannerDiv = styled.div`
     width: 100%;
@@ -12,6 +13,15 @@ const ProgressDiv = styled.div`
     height: 193px;
     border: 1px solid #99905B;
     background-color: #0e0f0f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: LeagueFont;
+    font-weight: 500;
+    font-size: 20px;
+`
+const ProgressText = styled.p`
+    color: white;
 `
 const VideoDiv = styled.div`
     width: 382px;
@@ -34,7 +44,8 @@ export default function Banner(){
     return(
         <BannerDiv>
             <ProgressDiv>
-                <h2>progreso de peliculas producidas</h2>
+                <ProgressText>PROGRESO DE SERIES PRODUCIDAS</ProgressText>
+                <ProgressBar/>
             </ProgressDiv>
             <VideoDiv>
             <iframe width="382" height="193" src="https://www.youtube.com/embed/c3y7UTfvzX0?autoplay=1&mute=1&loop=1&playlist=c3y7UTfvzX0" title="YouTube video player" frameborder="0" ></iframe>
