@@ -1,31 +1,20 @@
 import './App.css';
-import React, { useEffect, useState } from 'react';
-import { getCharacters } from './api';
+import React from 'react';
 import Main from './Pages/main';
+import Header from './Components/Header';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
 
-  const [characters, setCharacters] = useState([]);
-
-  useEffect(() => {
-    const fetchCharacters = async () => {
-      try {
-        const response = await getCharacters();
-        setCharacters(response.data.data.results);
-      } catch (error) {
-        console.error('Error fetching characters:', error);
-      }
-    };
-
-    fetchCharacters();
-  }, []);
-
-  console.log(characters);
+  
 
   return (
-    <div className="App">
-      <Main/>
-    </div>
+    <Router>
+      <Header/>
+      <Routes>
+        <Route path='/' element={<Main/>} />
+      </Routes>
+    </Router>
   );
 }
 

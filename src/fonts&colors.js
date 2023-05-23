@@ -1,0 +1,1 @@
+export const LeagueFont = "font-family: 'Vollkorn SC', serif;"
