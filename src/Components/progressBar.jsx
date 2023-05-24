@@ -73,7 +73,7 @@ export default function ProgressBar({seriesGoal}){
     }
         
     const totalSeries = characters.map((character) => character.series.available).reduce(function(a, b) { return a + b; }, 0);
-    const porcentajeCompletado = ((totalSeries / seriesGoal) * 100)
+    const porcentajeCompletado = ((totalSeries / seriesGoal) * 100).toFixed(2)
     let cantidadCeldas = Math.round( porcentajeCompletado / 10);
 
     //useEffect para traer la cantidad de series totales de los personajes en la api de Marvel
