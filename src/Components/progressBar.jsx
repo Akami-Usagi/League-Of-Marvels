@@ -58,9 +58,13 @@ const MetaCompletadaDiv = styled.div`
 `
 
 export default function ProgressBar({seriesGoal}){
-
+    /*
+     una serie de useStates para crear un array con el cual se van a renderizar celdas deacuerdo al porcentaje completado
+     el progressArray sirve para crear las celdas con un .map 
+    */
     const [characters, setCharacters] = useState([]);
     const [progressArray, setProgressArray] = useState([])
+    // funcion que agrega un item al progressArray por cada 10% de meta completada
     const cells = (index) => {
       for (let i = 0; i < index; i++) {
         setProgressArray(current => [...current, "item"])
@@ -72,6 +76,7 @@ export default function ProgressBar({seriesGoal}){
     const porcentajeCompletado = ((totalSeries / seriesGoal) * 100)
     let cantidadCeldas = Math.round( porcentajeCompletado / 10);
 
+    //useEffect para traer la cantidad de series totales de los personajes en la api de Marvel
     useEffect(() => {
       const fetchCharacters = async () => {
         try {
@@ -86,6 +91,7 @@ export default function ProgressBar({seriesGoal}){
       
     }, []);
 
+    //useEffect para ingresar items al progressArray con el cual renderizar las celdas
     useEffect(()=>{
       cells(cantidadCeldas)
       

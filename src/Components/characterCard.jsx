@@ -1,5 +1,6 @@
 import React from "react";
-import styled from "styled-components"
+import styled, {css} from "styled-components"
+import { useState } from "react";
 
 const CardBody = styled.div`
     width: 248px;
@@ -38,10 +39,12 @@ const CardImageDiv = styled.div`
 const CardImageBack = styled.img`
     width: 170px;
     transition: 1s ease-in-out;
-    z-index: 2;
-    &:hover{
-        transform: rotate(360deg);
-    }
+    transition: transform 1.5s;
+    ${props =>
+    props.rotado &&
+    css`
+      transform: rotate(360deg);
+    `}
 `
 const CardInfo = styled.div`
     width: 178px;
@@ -58,7 +61,7 @@ const CardInfo = styled.div`
 `
 const CardAvatar = styled.img`
     position: relative;
-    top: -170px;
+    top: -169px;
     width: 140px;
     height: 140px;
     border-radius: 100%;
@@ -68,17 +71,27 @@ const CardInfoDiv = styled.div`
     bottom: 120px;
 `
 
-export default function CharacterCard({nombre, imagen, comics, series}){
+export default function CharacterCard({nombre, imagen, comics, series, descripcion, openModal, setModalData}){
+
+    const [rotado, setRotado] = useState(false); //useState para rotar el circulo que rodea el avatar del personaje
+    const handleHover = () => {
+        setRotado(!rotado);
+      };
+
     return(
-        <CardBody>
+        <CardBody onClick={()=>{
+            // al clickear en una tarjeta se abre su modal y guarda los datos en la constante modalData de app.js para poder mostrar unicamente los datos de ese personaje
+            openModal();
+            setModalData({nombre, imagen, comics, series, descripcion})
+        }}>
             <CardTitle>
                 <CardTitleImg src="/img/lname_vector.svg" alt="lname" />
                 <p>{nombre}</p>
                 <CardTitleImg src="/img/rname_vector.svg" alt="rname" />
             </CardTitle>
             <CardImageDiv>
-                <CardImageBack src="/img/rotate_back.png" alt="Round" />
-                <CardAvatar src={imagen} alt="Character Avatar"/>
+                <CardImageBack src="/img/rotate_back.png" alt="Round" rotado={rotado}/>
+                <CardAvatar src={imagen} alt="Character Avatar" onMouseEnter={handleHover} onMouseLeave={handleHover}/> {/* al pasar por encima con el puntero desata el evento de rotacion del fondo */}
             </CardImageDiv>
             <CardInfoDiv>
                 <CardInfo>

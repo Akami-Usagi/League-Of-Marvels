@@ -5,6 +5,7 @@ import Banner from "../Components/banner";
 
 const MainDiv = styled.div`
     width: 100%;
+    z-index: -2;
 `
 const BackDiv = styled.div`
     width: 100%;
@@ -34,13 +35,13 @@ const ContentDiv = styled.div`
     row-gap: 20px;
 `
 
-export default function Main({seriesGoal}){
+export default function Main({seriesGoal, openModal, setModalData}){ //se envian los datos de la meta de series al banner y las funciones para abrir el modal y actualizar sus datos
     return(
         <MainDiv>
             <BackDiv></BackDiv>
             <ContentDiv>
                 <Banner seriesGoal={seriesGoal}/>
-                <CharacterList/>
+                <CharacterList openModal={openModal} setModalData={setModalData}/>
             </ContentDiv>
         </MainDiv>
         

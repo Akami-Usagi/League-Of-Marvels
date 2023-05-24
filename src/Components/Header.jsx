@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 
 export default function Header(){
 
-    const [homeSelected, setHomeSelected] = useState(false)
-    const [characterSelected, setCharacterSelected] = useState(true)
+    const [homeSelected, setHomeSelected] = useState(false) // verifica si la pestaña Home está seleccionada
+    const [characterSelected, setCharacterSelected] = useState(true) //verifica si la pestaña Personajes está seleccionada
 
     const MainHeader = styled.header`
         width: 100%;
@@ -92,6 +92,7 @@ export default function Header(){
         <MenuDiv>
             <LinkTo to={"/home"}>     
                 <MenuContainerHome onClick={() => {
+                    // al clickear en home, se activa la pestaña con sus decoradores y se desactiva la de personajes
                     setHomeSelected(true);
                     setCharacterSelected(false);
                 }}>
@@ -101,6 +102,7 @@ export default function Header(){
             </LinkTo>     
             <LinkTo to={"/"} style={{textDecoration: "none"}}>
                 <MenuContainer onClick={() => {
+                    // al clickear en Personajes, se activa la pestaña con sus decoradores y se desactiva la de home
                     setCharacterSelected(true);
                     setHomeSelected(false);
                 }}>

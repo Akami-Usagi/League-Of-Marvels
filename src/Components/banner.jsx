@@ -62,12 +62,12 @@ const VideoFime = styled.iframe`
 `
 
 
-export default function Banner({seriesGoal}){
+export default function Banner({seriesGoal}){ //meta de series desde app.js
     return(
         <BannerDiv>
             <ProgressDiv>
                 <ProgressText>PROGRESO DE SERIES PRODUCIDAS</ProgressText>
-                <ProgressBar seriesGoal={seriesGoal}/>
+                <ProgressBar seriesGoal={seriesGoal}/> {/* lleva los datos de la meta de forma dinamica para establecer metas personalizadas */}
             </ProgressDiv>
             <VideoDiv>
             <VideoFime src="https://www.youtube.com/embed/ONJ2Cr8h6A8?autoplay=1&mute=1&loop=1&playlist=ONJ2Cr8h6A8" title="YouTube video player" frameborder="0" ></VideoFime>
