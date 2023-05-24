@@ -7,12 +7,13 @@ const BoxCharacters = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 `
 const CharactersDiv = styled.div`
     display: flex;
-    flex-wrap: nowrap;
-    
-    column-gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 `
 const NavigationDiv = styled.div`
     display: flex;

@@ -3,11 +3,14 @@ import styled from "styled-components"
 import CharacterList from "../Components/characterList";
 import Banner from "../Components/banner";
 
-
+const MainDiv = styled.div`
+    width: 100%;
+`
 const BackDiv = styled.div`
     width: 100%;
     height: 100vh;
-    background: url("/img/content_back.jpg");
+    background: url("/img/content_back.jpg") no-repeat;
+    background-size: cover;
 `
 const ContentDiv = styled.div`
     position: absolute;
@@ -21,15 +24,15 @@ const ContentDiv = styled.div`
     row-gap: 20px;
 `
 
-export default function Main(){
+export default function Main({seriesGoal}){
     return(
-        <div>
+        <MainDiv>
             <BackDiv></BackDiv>
             <ContentDiv>
-                <Banner/>
+                <Banner seriesGoal={seriesGoal}/>
                 <CharacterList/>
             </ContentDiv>
-        </div>
+        </MainDiv>
         
     )
 }

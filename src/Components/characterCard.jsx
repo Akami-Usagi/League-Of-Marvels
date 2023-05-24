@@ -11,22 +11,26 @@ const CardBody = styled.div`
     flex-direction: column;
     align-items: center;
     
+    
 `
 const CardTitle = styled.div`
+    height: 50px;
+    position: relative;
+    top: 25px;
     display: flex;
-    align-items: first baseline;
+    align-items: center;
     color: white;
     font-family: LeagueFont;
     text-align: center;
     column-gap: 8px;
-    margin-top: 20px;
+    
 `
 const CardTitleImg = styled.img`
     width: 28px;
 `
 const CardImageDiv = styled.div`
-    position: absolute;
-    bottom: 80px;
+    position: relative;
+    top: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,8 +64,8 @@ const CardAvatar = styled.img`
     border-radius: 100%;
 `
 const CardInfoDiv = styled.div`
-    position: absolute;
-    bottom: 80px;
+    position: relative;
+    bottom: 120px;
 `
 
 export default function CharacterCard({nombre, imagen, comics, series}){
