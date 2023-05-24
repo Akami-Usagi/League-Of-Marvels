@@ -28,6 +28,9 @@ export default function Header(){
         @media (max-width: 500px){
             margin: initial;
         }
+        @media (max-width: 383px){
+            display: none;
+        }
     `
     const MenuDiv = styled.div`
         display: flex;

@@ -26,6 +26,7 @@ const ProgressDiv = styled.div`
 `
 const ProgressText = styled.p`
     color: white;
+    text-align: center;
 `
 const VideoDiv = styled.div`
     width: 382px;
@@ -38,11 +39,28 @@ const ImageDiv = styled.div`
     height: 193px;
     border: 1px solid #99905B;
     background-color: #0e0f0f;
+    @media (max-width: 383px){
+        width: 100%;
+        height: auto;
+    }
 `
 const ImageFile = styled.img`
     width: 382px;
     height: 193px;
+    @media (max-width: 383px){
+        width: 100%;
+        height: auto;
+    }
 `
+const VideoFime = styled.iframe`
+    width: 382px;
+    height: 193px;
+    @media (max-width: 383px){
+        width: 100%;
+        
+    }
+`
+
 
 export default function Banner({seriesGoal}){
     return(
@@ -52,7 +70,7 @@ export default function Banner({seriesGoal}){
                 <ProgressBar seriesGoal={seriesGoal}/>
             </ProgressDiv>
             <VideoDiv>
-            <iframe width="382" height="193" src="https://www.youtube.com/embed/c3y7UTfvzX0?autoplay=1&mute=1&loop=1&playlist=c3y7UTfvzX0" title="YouTube video player" frameborder="0" ></iframe>
+            <VideoFime src="https://www.youtube.com/embed/ONJ2Cr8h6A8?autoplay=1&mute=1&loop=1&playlist=ONJ2Cr8h6A8" title="YouTube video player" frameborder="0" ></VideoFime>
             </VideoDiv>
             <ImageDiv>
                 <ImageFile src="https://mcdn.wallpapersafari.com/medium/30/87/bKOQC3.jpg" alt="Marvel Wallpaper" />

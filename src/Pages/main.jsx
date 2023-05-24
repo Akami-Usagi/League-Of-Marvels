@@ -11,6 +11,16 @@ const BackDiv = styled.div`
     height: 100vh;
     background: url("/img/content_back.jpg") no-repeat;
     background-size: cover;
+    @media (max-width: 1330px){
+        height: 175vh;
+        background-size: auto 100%;
+    }
+    @media (max-width: 790px){
+        height: 257vh;
+    }
+    @media (max-width: 520px){
+        height: 370vh;
+    }
 `
 const ContentDiv = styled.div`
     position: absolute;
