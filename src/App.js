@@ -15,7 +15,7 @@ function App() {
       <Header/>
       <Routes>
         <Route path='/' element={<Main seriesGoal={seriesGoal}/>} />
-        <Route path="/home" element={<Home/>}/>
+        <Route path="/home" element={<Home seriesGoal={seriesGoal} setSeriesGoal={setSeriesGoal}/>}/>
       </Routes>
     </Router>
   );

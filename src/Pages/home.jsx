@@ -20,11 +20,22 @@ const BackDiv = styled.div`
         height: 370vh;
     }
 `
+const ContentDiv = styled.div`
+    
+`
+export default function Home({seriesGoal, setSeriesGoal}){
 
-export default function Home(){
+
+
     return(
         <MainDiv>
             <BackDiv></BackDiv>
+            <ContentDiv>
+                <h1>DESAROLLADO POR</h1>
+                <h3>Christian Camilo Arango Escobar</h3>
+
+                 <input type="number" onChange={(event)=> setSeriesGoal(event.target.value)}/>
+            </ContentDiv>
             
         </MainDiv>
     )
