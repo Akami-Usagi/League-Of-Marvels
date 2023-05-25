@@ -24,6 +24,7 @@ const ModalDiv = styled(Modal)`
         height: fit-content;
         flex-direction: column;
         padding: 60px 30px;
+        top: 70px;
     }
 `
 
