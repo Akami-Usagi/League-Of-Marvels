@@ -88,11 +88,11 @@ export default function Home({seriesGoal, setSeriesGoal}){
                     <InputMeta type="number" value={meta} onChange={(event)=> setMeta(event.target.value)}/> 
                     {/* Aqui nos aseguramos de que el valor ingresado sea mayor al total de series para poderlo establecer como meta */}
                     <MetaButton onClick={()=>{
-                        if (meta >= 265) {
+                        if (meta >= 1110) {
                             setSeriesGoal(meta);
                             alert("Nueva Meta Establecida")
                         }else{
-                            alert("La meta de produccion es inferior al valor de series producidas, ingrese un valor mayor a 265")
+                            alert("La meta de produccion es inferior al valor de series producidas, ingrese un valor mayor a 1110")
                         }
                         
                     }}>Aceptar</MetaButton>
