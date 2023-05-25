@@ -70,7 +70,7 @@ const MetaButton = styled.button`
 
 export default function Home({seriesGoal, setSeriesGoal}){
 
-    const [meta, setMeta] = useState(null); //usestate para establecer una nueva meta
+    const [meta, setMeta] = useState(undefined); //usestate para establecer una nueva meta
 
     return(
         <MainDiv>
