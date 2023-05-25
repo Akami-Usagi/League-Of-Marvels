@@ -118,8 +118,8 @@ export default function ProgressBar({seriesGoal}){
                 <ProgressBack src="/img/progress_bar.svg" alt="Progress Bar" />
                 <ProgressCell>
                   <MetaCompletadaDiv>
-                  {progressArray.map((item) => {
-                    return <ProgressImage src="/img/progress_cell.svg"/>
+                  {progressArray.map((item, index) => {
+                    return <ProgressImage src="/img/progress_cell.svg" key={index}/>
                   })}
                   <MetaCompletada>
                      <p>{`${totalSeries} Series`}</p>

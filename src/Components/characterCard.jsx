@@ -41,7 +41,7 @@ const CardImageBack = styled.img`
     transition: 1s ease-in-out;
     transition: transform 1.5s;
     ${props =>
-    props.rotado &&
+    props.rotado === "true" &&
     css`
       transform: rotate(360deg);
     `}
@@ -90,7 +90,7 @@ export default function CharacterCard({nombre, imagen, comics, series, descripci
                 <CardTitleImg src="/img/rname_vector.svg" alt="rname" />
             </CardTitle>
             <CardImageDiv>
-                <CardImageBack src="/img/rotate_back.png" alt="Round" rotado={rotado}/>
+                <CardImageBack src="/img/rotate_back.png" alt="Round" rotado={rotado.toString()}/>
                 <CardAvatar src={imagen} alt="Character Avatar" onMouseEnter={handleHover} onMouseLeave={handleHover}/> {/* al pasar por encima con el puntero desata el evento de rotacion del fondo */}
             </CardImageDiv>
             <CardInfoDiv>

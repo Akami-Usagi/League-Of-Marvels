@@ -70,7 +70,7 @@ export default function Banner({seriesGoal}){ //meta de series desde app.js
                 <ProgressBar seriesGoal={seriesGoal}/> {/* lleva los datos de la meta de forma dinamica para establecer metas personalizadas */}
             </ProgressDiv>
             <VideoDiv>
-            <VideoFime src="https://www.youtube.com/embed/ONJ2Cr8h6A8?autoplay=1&mute=1&loop=1&playlist=ONJ2Cr8h6A8" title="YouTube video player" frameborder="0" ></VideoFime>
+            <VideoFime src="https://www.youtube.com/embed/ONJ2Cr8h6A8?autoplay=1&mute=1&loop=1&playlist=ONJ2Cr8h6A8" title="YouTube video player" frameBorder="0" ></VideoFime>
             </VideoDiv>
             <ImageDiv>
                 <ImageFile src="https://mcdn.wallpapersafari.com/medium/30/87/bKOQC3.jpg" alt="Marvel Wallpaper" />
