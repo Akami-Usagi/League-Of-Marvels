@@ -14,7 +14,7 @@ const ModalDiv = styled.div`
 
 function App() {
 
-  const [seriesGoal, setSeriesGoal] = useState(1500); //valor inicial de la meta de series
+  const [seriesGoal, setSeriesGoal] = useState(3000); //valor inicial de la meta de series
   const [modalIsOpen, setModalIsOpen] = useState(false); //booleano para definir si el modal esta abierto
   const [modalData, setModalData] = useState({}); // state para traer los datos de cada card para crear el modal
 
