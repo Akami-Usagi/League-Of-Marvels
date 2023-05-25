@@ -58,6 +58,7 @@ const CustomModal = ({ isOpen, onClose, modalData }) => {
         isOpen={isOpen}
         onRequestClose={onClose}
         contentLabel="Example Modal"
+        style={{overlay: {backgroundColor: "rgba(0,0,0,0.75)"}}}
         >
             <div>
                 <ModalImg src={modalData.imagen} alt={modalData.nombre} />
