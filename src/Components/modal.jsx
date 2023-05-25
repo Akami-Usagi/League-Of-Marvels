@@ -19,6 +19,10 @@ const ModalDiv = styled(Modal)`
     justify-content: center;
     padding: 0 30px;
     box-shadow: 10px 10px 10px rgba(0,0,0,0.4), -10px 10px 10px rgba(0,0,0,0.4);
+    @media (max-width: 500px){
+        width: 80%;
+        flex-direction: column;
+    }
 `
 
 const ModalImg = styled.img`
@@ -30,6 +34,9 @@ const ModalTextDiv = styled.div`
     color: white;
     font-family: LeagueFont;
     margin-left: 60px;
+    @media(max-width: 500px){
+        margin: initial;
+    }
     
 `
 const ModalButton = styled.button`
