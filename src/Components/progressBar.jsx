@@ -39,6 +39,9 @@ const ProgressCell = styled.div`
 const ProgressImage = styled.img`
       height: 37px;
       margin-right: -5px;
+      @media (max-width: 400px){
+        display: none;;
+      }
       
 `
 const MetaCompletada = styled.div`
@@ -55,6 +58,13 @@ const MetaCompletada = styled.div`
 `
 const MetaCompletadaDiv = styled.div`
   width: fit-content;
+  @media (max-width: 400px){
+    position: relative;
+    top: 40px;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
 `
 
 export default function ProgressBar({seriesGoal}){
