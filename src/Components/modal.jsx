@@ -23,6 +23,7 @@ const ModalDiv = styled(Modal)`
         width: 80%;
         height: fit-content;
         flex-direction: column;
+        padding: 20px 0;
     }
 `
 
