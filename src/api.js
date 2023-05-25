@@ -9,7 +9,7 @@ const getCharacters = () => {
   const timestamp = new Date().getTime();
   const hash = md5(timestamp + API_PRIVATE_KEY + API_PUBLIC_KEY);
 
-  const url = `${BASE_URL}/characters?ts=${timestamp}&apikey=${API_PUBLIC_KEY}&hash=${hash}`;
+  const url = `${BASE_URL}/characters?nameStartsWith=cap&ts=${timestamp}&apikey=${API_PUBLIC_KEY}&hash=${hash}`;
 
   return axios.get(url);
 };
