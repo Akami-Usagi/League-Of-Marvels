@@ -21,6 +21,7 @@ const ModalDiv = styled(Modal)`
     box-shadow: 10px 10px 10px rgba(0,0,0,0.4), -10px 10px 10px rgba(0,0,0,0.4);
     @media (max-width: 500px){
         width: 80%;
+        height: fit-content;
         flex-direction: column;
     }
 `
