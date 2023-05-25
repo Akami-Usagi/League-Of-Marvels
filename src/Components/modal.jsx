@@ -69,7 +69,7 @@ const CustomModal = ({ isOpen, onClose, modalData }) => {
                 <h1>{modalData.nombre}</h1>
                 <h3>{`Comics: ${modalData.comics}`}</h3>
                 <h3>{`Series: ${modalData.series}`}</h3>
-                <p>{modalData.descripcion}</p>
+                <p>{modalData.descripcion === "" ? "Lo sentimos, este personaje no tiene descripcion activa en la base de datos." : modalData.descripcion}</p>
                 <ModalButton onClick={onClose}>Cerrar</ModalButton>
             </ModalTextDiv>  
             
