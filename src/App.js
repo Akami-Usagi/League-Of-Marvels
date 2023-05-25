@@ -30,7 +30,7 @@ function App() {
     <Router>
       <Header/>
       <ModalDiv>
-        <CustomModal isOpen={modalIsOpen} onClose={closeModal} modalData={modalData}/>
+        <CustomModal isOpen={modalIsOpen} onClose={closeModal} modalData={modalData} style={{overlay: {backgroundColor: "rgba(0, 0, 0, 0.75)"}}}/>
       </ModalDiv>
       <Routes>
         <Route path='/' element={<Main seriesGoal={seriesGoal} openModal={openModal} setModalData={setModalData}/>} />
