@@ -19,11 +19,11 @@ const ModalDiv = styled(Modal)`
     justify-content: center;
     padding: 0 30px;
     box-shadow: 10px 10px 10px rgba(0,0,0,0.4), -10px 10px 10px rgba(0,0,0,0.4);
-    @media (max-width: 500px){
+    @media (max-width: 900px){
         width: 80%;
         height: fit-content;
         flex-direction: column;
-        padding: 50px 30px;
+        padding: 60px 30px;
     }
 `
 
