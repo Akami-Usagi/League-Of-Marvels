@@ -9,7 +9,7 @@ const MainDiv = styled.div`
 `
 const BackDiv = styled.div`
     
-    height: 100vh;
+    height: 100%;
     background: linear-gradient(black 2%, transparent), url("/img/content_back.jpg") no-repeat center fixed;
     background-size: cover;
 `
