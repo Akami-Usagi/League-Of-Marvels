@@ -10,18 +10,8 @@ const MainDiv = styled.div`
 const BackDiv = styled.div`
     width: 100%;
     height: 100vh;
-    background: linear-gradient(black 2%, transparent), url("/img/content_back.jpg") no-repeat;
+    background: linear-gradient(black 2%, transparent), url("/img/content_back.jpg") no-repeat center fixed;
     background-size: cover;
-    @media (max-width: 1330px){
-        height: 175vh;
-        background-size: auto 100%;
-    }
-    @media (max-width: 790px){
-        height: 257vh;
-    }
-    @media (max-width: 520px){
-        height: 370vh;
-    }
 `
 const ContentDiv = styled.div`
     position: absolute;
